@@ -1,6 +1,6 @@
 import { PROMPT, SUCCESS, FAILURE, ERROR } from "../lang/messages/en/user.js";
 
-const COLORS = ["red", "green", "blue", "yellow", "orange", "purple", "pink"];
+const COLORS = ["red", "green", "blue", "darkgoldenrod", "orange", "purple", "pink"];
 const BUTTON_CLASS_NAME = "game-button"
 const BUTTON_HEIGHT = "5em";
 const BUTTON_WIDTH = "10em";
