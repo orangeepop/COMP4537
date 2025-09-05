@@ -1,0 +1,11 @@
+.game-button {
+    color: white;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+input {
+    width: 10em;
+}
