@@ -1,5 +1,7 @@
 import { REMOVE } from "../lang/messages/en/user.js";
 
+// chatGPT used for passing function references
+
 export class NoteElement {
     constructor(note, disabled, markDirtyFunction = () => {}, deleteNoteFunction = () => {}) {
         this._note = note;

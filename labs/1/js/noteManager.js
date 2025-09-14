@@ -2,6 +2,7 @@ import { LocalStorageHelper } from "./localStorageHelper.js";
 
 export class NoteManager {
     constructor() {
+        LocalStorageHelper.checkLocalStorageSupported();
         this._initializeBackButton();
         this._notes = LocalStorageHelper.getAllNotes();
         this._scheduledFunction();

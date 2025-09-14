@@ -1,7 +1,9 @@
 import { Note } from "./note.js";
 
+// chatGPT used for examples of reading and writing into local store
+
 export class LocalStorageHelper {
-    static _checkLocalStorageSupported() {
+    static checkLocalStorageSupported() {
         if (typeof(Storage) === "undefined") {
             document.write("Local Storage is not supported by your browser.");
             window.stop();
@@ -9,12 +11,10 @@ export class LocalStorageHelper {
     }
 
     static saveNotes(notes) {
-        this._checkLocalStorageSupported();
         localStorage.setItem("notes", notes);
     }
 
     static getAllNotes() {
-        this._checkLocalStorageSupported();
         const notes = [];
         console.log(localStorage)
 
@@ -44,7 +44,6 @@ export class LocalStorageHelper {
     }
 
     static incrementIdCounter() {
-        this._checkLocalStorageSupported();
         let id = localStorage.getItem("id");
         if (id) {
             const newId = parseInt(id) + 1;
@@ -55,7 +54,6 @@ export class LocalStorageHelper {
     }
 
     static getIdCounter() {
-        this._checkLocalStorageSupported();
         let id = localStorage.getItem("id");
         if (id) {
             return parseInt(id);

@@ -1,5 +1,5 @@
 import { ReadNoteManager } from "../readNoteManager.js";
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", () => {
     const noteManager = new ReadNoteManager();
-};
+});

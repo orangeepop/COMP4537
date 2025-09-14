@@ -5,6 +5,8 @@ import { Note } from "./note.js";
 import { NoteElement } from "./noteElement.js";
 import { ADD } from "../lang/messages/en/user.js";
 
+// chatGPT used for passing function references
+
 export class EditNoteManager extends NoteManager {
     constructor() {
         super();

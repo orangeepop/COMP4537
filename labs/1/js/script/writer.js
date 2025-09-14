@@ -1,5 +1,5 @@
 import { EditNoteManager } from "../editNoteManager.js";
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", () => {
     const noteManager = new EditNoteManager();
-};
+});
