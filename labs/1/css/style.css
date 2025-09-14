@@ -1,0 +1,63 @@
+#container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container > div {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.note-input {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    margin: 10px;
+}
+
+textarea {
+    background-color: rgb(88, 156, 179);
+    color: white;
+    height: 100%;
+    width: 300px;
+}
+
+button {
+    background-color: rgb(88, 156, 179);
+    color: white;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    height: 30px;
+    width: 80px;
+}
+
+#add-button {
+    background-color: lightgreen;
+}
+
+#remove-button {
+    background-color: lightcoral;
+}
+
+#time-last-accessed {
+    width: 100%;
+    text-align: right;
+}
