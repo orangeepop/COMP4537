@@ -10,13 +10,13 @@ class Main {
         let readerButton = document.createElement("button");
         readerButton.textContent = READER;
         readerButton.addEventListener("click", () => {
-            window.location.href = "/reader.html";
+            window.location.href = "./reader.html";
         });
 
         let writerButton = document.createElement("button");
         writerButton.textContent = WRITER;
         writerButton.addEventListener("click", () => {
-            window.location.href = "writer.html";
+            window.location.href = "./writer.html";
         });
 
         let buttonsDiv = document.createElement("div");

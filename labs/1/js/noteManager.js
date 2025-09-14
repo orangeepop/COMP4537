@@ -18,7 +18,7 @@ export class NoteManager {
         element.id = "back-button";
         element.textContent = "Back";
         element.addEventListener("click", () => {
-            window.location.href = "index.html";
+            window.location.href = "./index.html";
         });
 
         document.getElementById("back-button-container").appendChild(element);
