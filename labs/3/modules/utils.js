@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const lang = require("../lang/en/en.js");
 const filename = "text.txt";
 
@@ -13,12 +14,13 @@ function handleWrite(res, q) {
     res.end();
 }
 
-function handleRead(res) {
-    let path = "./" + filename;
-    fs.readFile(path, function(err, data) {
+function handleRead(res, q) {
+    let filename = path.basename(q.pathname)
+    let pathToFile = "./" + filename;
+    fs.readFile(pathToFile, function(err, data) {
         if (err) {
             res.writeHead(404, { 'Content-Type': 'text/html'});
-            return res.end(path + lang.notFound());
+            return res.end(filename + " " + lang.notFound());
         }
 
         res.writeHead(200, { 'Content-Type': 'text/html'});

@@ -9,8 +9,8 @@ http.createServer((req, res) => {
         utils.handleGetDate(res, q);
     } else if (q.pathname === "/COMP4537/labs/3/writeFile/") {
         utils.handleWrite(res, q);
-    } else if (q.pathname === "/COMP4537/labs/3/readFile/text.txt") {
-        utils.handleRead(res);
+    } else if (q.pathname.startsWith("/COMP4537/labs/3/readFile/")) {
+        utils.handleRead(res, q);
     } else {
         utils.handleBadRequest(res)
     }
