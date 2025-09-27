@@ -1,33 +1,17 @@
 let http = require('http');
 let url = require('url');
 let utils = require('./modules/utils');
-let greeting = require('./lang/en/en');
-
-// http.createServer(function (req, res) {
-//     let q = url.parse(req.url, true);
-
-
-// }
-// ).listen(8080);
-
 
 http.createServer((req, res) => {
     const q = url.parse(req.url, true);
-    console.log(q);
-    console.log(q.query);
-    console.log(q.pathname);
 
-    if (q.pathname = "/COMP4537/labs/3/getDate/") {
-        let name = q.query.name;
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(`<div style="color: blue">${greeting.getString(name)} ${utils.getDate()}</div>`);
-        res.end();
+    if (q.pathname === "/COMP4537/labs/3/getDate/") {
+        utils.handleGetDate(res, q);
     } else if (q.pathname === "/COMP4537/labs/3/writeFile/") {
         utils.handleWrite(res, q);
     } else if (q.pathname === "/COMP4537/labs/3/readFile/text.txt") {
-        utils.handleRead(res, q);
+        utils.handleRead(res);
     } else {
-        res.writeHead(404, { "Content-Type": "text/plain" });
-        res.end("Not found");
+        utils.handleBadRequest(res)
     }
 }).listen(8080);
