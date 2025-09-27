@@ -13,6 +13,9 @@ let greeting = require('./lang/en/en');
 
 http.createServer((req, res) => {
     const q = url.parse(req.url, true);
+    console.log(q);
+    console.log(q.query);
+    console.log(q.pathname);
 
     if (q.pathname = "/COMP4537/labs/3/getDate/") {
         let name = q.query.name;
@@ -21,7 +24,7 @@ http.createServer((req, res) => {
         res.end();
     } else if (q.pathname === "/COMP4537/labs/3/writeFile/") {
         utils.handleWrite(res, q);
-    } else if (q.pathname === "/COMP4537/labs/3/readFile/") {
+    } else if (q.pathname === "/COMP4537/labs/3/readFile/text.txt") {
         utils.handleRead(res, q);
     } else {
         res.writeHead(404, { "Content-Type": "text/plain" });
