@@ -21,4 +21,4 @@ services:
     runtime: node
     repo: https://github.com/orangeepop/COMP4537.git
     buildCommand: echo "no build step"
-    startCommand: node server.js
+    startCommand: node labs/3/server.js
