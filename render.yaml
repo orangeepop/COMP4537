@@ -17,24 +17,8 @@ services:
 
   - type: web
     plan: free
-    name: comp4537-lab3-date
+    name: comp4537-lab3
     runtime: node
     repo: https://github.com/orangeepop/COMP4537.git
     buildCommand: echo "no build step"
-    startCommand: node labs/3/getDate/server.js
-
-  - type: web
-    plan: free
-    name: comp4537-lab3-read
-    runtime: node
-    repo: https://github.com/orangeepop/COMP4537.git
-    buildCommand: echo "no build step"
-    startCommand: node labs/3/readFile/readFile.js
-
-  - type: web
-    plan: free
-    name: comp4537-lab3-write
-    runtime: node
-    repo: https://github.com/orangeepop/COMP4537.git
-    buildCommand: echo "no build step"
-    startCommand: node labs/3/writeFile/writeFile.js
+    startCommand: node server.js
