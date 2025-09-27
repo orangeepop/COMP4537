@@ -1,7 +1,7 @@
 let http = require('http');
 let url = require('url');
 let utils = require('./modules/utils');
-let greeting = require('./getDate/lang/en/en');
+let greeting = require('./lang/en/en');
 
 // http.createServer(function (req, res) {
 //     let q = url.parse(req.url, true);
